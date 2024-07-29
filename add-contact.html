@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN - Add Contacts</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/join-logo.png">
+    <link rel="stylesheet" href="./css/add-contact.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./responsive-css/add-contact.responsive.css">
+    <link rel="stylesheet" href="./responsive-css/edit-contact.responsive.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/contacts.js"></script>
+</head>
+
+
+<body>
+    <div onclick="event.stopPropagation()" class="full-container show" id="add-contact-popup">
+        <div id="taskContentLeft" class="left-container">
+
+            <div class="addToTaskInputSection">
+                <span class="addTask-Subheaders">Title</span>
+                <input placeholder="Enter a title" required class="addTotaskInputField " id="title">
+            </div>
+
+            <div class="addToTaskInputSection">
+                <span class="addTask-Subheaders">Description</span>
+                <textarea required id="description" placeholder="Enter a description"
+                    class="input-description"></textarea>
+            </div>
+
+            <div class="addToTaskInputSection">
+                <span class="addTask-Subheaders">Assign to</span>
+                <select id="userSelect" class="addTotaskInputField">
+                </select>
+            </div>                    
+
+        </div>
+        <div id="taskContentRight" class="right-container">
+
+            <div class="addToTaskInputSectionRight">
+                <span class="addTask-Subheaders">Due date</span>
+                <input type="date" name="today" placeholder="" class="addTotaskInputField" id="date">
+                <div class="priority-container">
+                    <p class="form-title">Priority</p>
+                    <div class="priority-icons">
+                        <div onclick="urgentButtonBackgrundcolor()" class="Urgent-color-red priority-div"
+                            id="Urgent-div">
+                            Urgent
+                            <img class="priority-icon visible" src="assets/img/urgent-image-rot.svg"
+                                alt="Urgent" id="priority-urgent-red">
+                            <img class="priority-icon" src="assets/img/urgent-image-weiß.svg" alt="Low"
+                                id="priority-urgent-white">
+                        </div>
+                        <div onclick="mediumButtonBackgrundcolor()" class="medium-color-yellow priority-div"
+                            id="Medium-div">Medium
+                            <img class="priority-icon visible" src="assets/img/medium-image-gelbe.svg"
+                                alt="Medium" id="priority-medium-yellow">
+                            <img class="priority-icon" src="assets/img/medium-image-weiß.svg" alt="Medium"
+                                id="priority-medium-white">
+                        </div>
+                        <div onclick="lowButtonBackgrundcolor()" class="priority-clor-green priority-div"
+                            id="Low-div">Low
+                            <img class="priority-icon visible" src="assets/img/low-image-grune.svg" alt="Low"
+                                id="priority-low-green">
+                            <img class="priority-icon" src="assets/img/low-image-weiß.svg" alt="Low"
+                                id="priority-low-white">
+                        </div>
+                    </div>
+                </div>
+                <div class="addToTaskInputSection">
+                    <span class="addTask-Subheaders">Category*</span>
+                    <select id="categorySelect" class="addTotaskInputField">
+                        <option value="technicalTask">Technical Task</option>
+                        <option value="userStory">User Story</option>
+                    </select>
+                </div>
+                <div class="addToTaskInputSection">
+                    <span class="addTask-Subheaders">Subtasks</span>
+                    <select id="subtasksSelect" class="addTotaskInputField">
+                    </select>
+                </div> 
+            </div>
+                <div class="btnRow">
+                <button onclick="clearAllFields()" type="button" class="guest-log-in-btn">Clear</button>
+                <button class="log-in-btn">Add Task</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

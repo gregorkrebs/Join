@@ -1,0 +1,5 @@
+backend/.env
+backend/node_modules/*
+backend/firebase-adminsdk-credentials.json
+assets/contacts/*
+assets/profiles/*

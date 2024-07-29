@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/join-logo.png">
+    <title>Join - Help</title>
+    <link rel="stylesheet" href="./css/header-sidebar.css">
+    <link rel="stylesheet" href="./css/style-legal.css">
+    <link rel="stylesheet" href="./css/summary.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./responsive-css/summary-responsive.css">
+    <link rel="stylesheet" href="./responsive-css/board-responsive.css">
+    <link rel="stylesheet" href="./responsive-css/legal-notice.responsive.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/loginRequired.js"></script>
+</head>
+
+
+<body>
+    <div class="header">
+        <img class="new-logo d-none" src="./assets/img/join-logo.png">
+        <span class="sub-header">Kanban Project Management Tool </span>
+        <div id="header-contacts" class="head-container-right">
+            <a href="./help.html"><img src="./assets/img/question.png"></a>
+            <a class="legal-notice-mobile" href="./legal-notice.html"><img src="./assets/img/info-logo.png"></a>
+            <div id="profile-actions" class="head-profile-img" onmouseover="showLogout()"></div>
+            <div id="header-logout" onmouseout="hideLogout()" class="header-logout">
+                <button id="logout-btn"> Log-out? </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-header" id="sidebar-header">
+        <a href="/">
+            <div class="sidebar-top">
+                <img id="join-logo" class="join-logo-head" src="./assets/img/join-logo-white.png">
+            </div>
+        </a>
+        <div class="sidebar-mid">
+            <div class="sidebar-center">
+                <div class="sidebar-center">
+                    <a class="sidebar-link" id="sidebar-link0" href="./">
+                        <div class="link-name">
+                            Summary
+                        </div>
+                        <div>
+                            <img class="link-img" src="./assets/img/summary-logo.png">
+                        </div>
+                    </a>
+                    <a id="sidebar-link1" href="./board.html">
+                        <div class="link-name">
+                            Board
+                        </div>
+                        <div>
+                            <img class="link-img" src="./assets/img/board-logo.png">
+                        </div>
+                    </a>
+                    <a class="sidebar-active" id="sidebar-link2" href="./add-task.html">
+                        <div class="link-name">
+                            Add Task
+                        </div>
+                        <div>
+                            <img class="link-img" src="./assets/img/add-task-logo.png">
+                        </div>
+                    </a>
+                    <a id="sidebar-link3" href="./contacts.html">
+                        <div class="link-name">
+                            Contacts
+                        </div>
+                        <div>
+                            <img class="link-img" src="./assets/img/contacts-logo.png">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a class="sidebar-bottom" href="./legal-notice.html">Legal notice
+                <div class="sidebarBottomLegalNotice">
+                    <img src="./assets/img/info-logo.png">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="legal-overview-help">
+        <div class="headline-index">
+            <span>Help</span>
+            <a href="./">
+                <img class="arrow-left" src="./assets/img/arrow-left.png">
+            </a>
+        </div>
+
+        <div>
+            <h2 class="help-texts">What is Join?</h2>
+            <p>
+                Join is a classical task management tool with a kanban-board. You can organize your tasks whithin a
+                project or business processes. It is perfectly suitable for working together with your team. Join let
+                you and your team work more efficiently. You have all of your taks in focus und won't miss upcoming
+                deadlines anymore. Start working with Join now!
+            </p>
+        </div>
+        <h2 class="help-texts">How to use it</h2>
+        <table>
+            <tr class="help-table">
+                <td class="help-number">1.</td>
+                <td>Add a task with title, description and category. Assign the task to other team members of your
+                    contact list or invite new contacts.</td>
+            </tr>
+            <tr class="help-table">
+                <td class="help-number">2.</td>
+                <td>Check the current status of your tasks in the kanban-board. You can drag and drop your task to
+                    change the status. Also it is possible to edit the task details.</td>
+            </tr>
+            <tr class="help-table">
+                <td class="help-number">3.</td>
+                <td>Add team members to your contact list to communicate to them fastly. Also you can assign tasks
+                    directly to your contacts.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
