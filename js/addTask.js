@@ -1,19 +1,4 @@
 /**
- * Fetches the CSRF token required for making secure requests to the server.
- * @returns {Promise<string>} A promise that resolves to the CSRF token.
- */
-async function getCsrfToken() {
-    let apiUrl = await importConfig();
-    let fetchUrl = `${apiUrl}/api/form`;
-    const csrfResponse = await fetch(fetchUrl, {
-        credentials: 'include'
-    });
-    const csrfData = await csrfResponse.json();
-    const csrfToken = csrfData.csrfToken;
-    return csrfToken;
-}
-
-/**
  * Attaches event listeners to handle the task submission form. Prevents the default form submission
  * and manually handles data collection, validation, and submission.
  */
@@ -47,47 +32,32 @@ document.addEventListener('DOMContentLoaded', function() {
         const title = document.getElementById('title').value;
         const description = document.getElementById('description').value;
         const dueDate = document.getElementById('date').value;
-        const assignee = document.getElementById('userSelect').value;
+        const email = document.getElementById('userSelect').value;
         const category = document.getElementById('categorySelect').value;
         const prio = document.getElementById('input-prio').innerHTML;
         const subTasksString = subTasks.join(', ');
     
-        if (!title || !description || !dueDate || !assignee || !category || !prio) {
-            console.log({ title, description, dueDate, assignee, category, prio });
+        if (!title || !description || !dueDate || !email || !category || !prio) {
+            console.log({ title, description, dueDate, email, category, prio });
             alert('All fields are required');
             return;
         }
-    
-        const taskData = {
-            title: title,
-            description: description,
-            dueDate: dueDate,
-            assignee: assignee,
-            category: category,
-            priority: prio,
-            subTasks: subTasksString
-        };
-    
+        let dotMail = email.replace(',', '.');
+        const assignee = await fetchUserNameByEmail(dotMail);
+        if (!assignee) {
+            alert('Assigned user not found');
+            return;
+        }
+        const taskData = { title: title, description: description, dueDate: dueDate, assignee: assignee, category: category, priority: prio, subTasks: subTasksString };
         try {
-            const csrfToken = await getCsrfToken();
             let apiUrl = await importConfig();
-            let fetchUrl = `${apiUrl}/api/add-task`;
-            const response = await fetch(fetchUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'CSRF-Token': csrfToken,
-                    'Authorization': `Bearer ${localStorage.getItem('token')}`
-                },
-                credentials: 'include',
-                body: JSON.stringify(taskData)
-            });
+            let response = await fetchToBackend(`${apiUrl}/api/add-task`, 'POST', JSON.stringify(taskData));
     
             const result = await response.json();
             if (response.ok) {
                 alert('Task added successfully');
                 clearAllFields();
-                clearSubtaskList();  // Leert das Subtasks-Array nach dem Absenden
+                clearSubtaskList();
             } else {
                 alert('Failed to add task: ' + result.message);
             }
@@ -95,7 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error adding task:', error);
             alert('Failed to add task due to an internal error');
         }
-    }); 
+    });
+   
+    async function fetchUserNameByEmail(email) {
+        let apiUrl = await importConfig();
+        const response = await fetchToBackend(`${apiUrl}/api/accounts`);
+        if (!response.ok) {
+            throw new Error('Failed to fetch user accounts');
+        }
+        const accounts = await response.json();
+        const user = Object.values(accounts).find(user => user.email === email);
+        return user ? `${user.firstName} ${user.lastName}` : null;
+    }
 
     function clearSubtaskList() {
         subTasks = [];
@@ -104,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     fetchAccountsAndFillDropdown();
 });
-
 
 /**
  * Clears all input fields related to task creation.
@@ -124,19 +104,8 @@ function clearAllFields() {
  */
 async function fetchAccountsAndFillDropdown() {
     try {
-        const csrfToken = await getCsrfToken();
         let apiUrl = await importConfig();
-        let fetchUrl = `${apiUrl}/api/accounts`;
-
-        const response = await fetch(fetchUrl, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'CSRF-Token': csrfToken,
-                'Authorization': `Bearer ${localStorage.getItem('token')}`
-            },
-            credentials: 'include',
-        });
+        const response = await fetchToBackend(`${apiUrl}/api/accounts`, 'GET');
 
         if (!response.ok) {
             throw new Error('Failed to fetch accounts');
