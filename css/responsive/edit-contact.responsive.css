@@ -1,0 +1,390 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.show {
+    -webkit-animation: slide-in 0.5s;
+            animation: slide-in 0.5s;
+}
+
+@-webkit-keyframes slide-in {
+    from {
+        -webkit-transform: translateX(1000%);
+                transform: translateX(1000%);
+    }
+
+    to {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        -webkit-transform: translateX(1000%);
+                transform: translateX(1000%);
+    }
+
+    to {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+    }
+}
+.messageBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+.show-message-popup {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #2A3647;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    color: white;
+    bottom: 20px;
+    position: absolute;
+}
+
+
+@media (max-width: 1550px) {
+    .input-edit {
+        margin-left: 15px !important;
+    }
+
+    .right-container-edit {
+        width: 615px !important;
+    }
+
+    .left-container-edit {
+        width: 390px !important;
+        padding-left: 30px !important;
+        -webkit-box-pack: start !important;
+            -ms-flex-pack: start !important;
+                justify-content: flex-start !important;
+        padding-top: 70px;
+    }
+
+    .join-logo-edit {
+        position: unset !important;
+    }
+
+    .contact-img-big {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    .img-container-edit {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .x-container-edit {
+        top: -351px;
+        right: -560px;
+    }
+}
+
+
+@media (max-width: 1450px) {
+    .right-container-edit {
+        width: 470px !important;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 25px;
+        padding-top: 10px;
+    }
+
+    .input-edit {
+        margin-left: 0;
+    }
+
+    .left-container-edit {
+        width: 300px !important;
+    }
+
+    input {
+        font-size: 21px;
+    }
+
+    .x-container-edit {
+        top: -120px !important;
+        right: -240px !important;
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    #w3-edit {
+        width: 301px;
+        left: 0px !important;
+        top: -100px !important;
+    }
+
+    .full-container-edit {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
+        left: 0px !important;
+        top: -170px !important;
+    }
+
+    .left-container-edit {
+        width: 450px !important;
+        border-radius: 30px 30px 0 0 !important;
+        padding-top: 40px !important;
+        height: 380px !important;
+    }
+
+    .right-container-edit {
+        width: 479px !important;
+        height: 625px !important;
+        border-radius: 0 0 30px 30px !important;
+        background-color: #ffffff;
+    }
+
+    .img-container-edit {
+        width: 100px !important;
+        height: 100px !important
+    }
+
+    .contact-img-big {
+        width: 100px;
+        height: 100px;
+    }
+
+    .input-edit {
+        margin-left: 0 !important;
+        gap: 45px;
+    }
+
+    .x-container-edit {
+        top: -390px !important;
+        right: -240px !important;
+        -webkit-filter: invert(1);
+                filter: invert(1);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .left-container-edit {
+        width: 350px !important;
+    }
+
+    .left-container-edit h1 {
+        font-size: 50px;
+    }
+
+    .left-container-edit span {
+        font-size: 25px;
+    }
+
+    .right-container-edit {
+        width: 378px !important;
+        height: 600px !important;
+    }
+
+    .input-edit {
+        gap: 40px;
+    }
+
+    .log-in-input {
+        width: 350px !important;
+    }
+
+    .edit-button {
+        gap: 20px;
+    }
+
+    .primary-btn {
+        width: unset !important;
+    }
+
+    .x-container-edit {
+        top: -380px !important;
+        right: -180px !important;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .left-container-edit {
+        width: 500px !important;
+        border-radius: 30px 30px 0 0 !important;
+        padding-top: 40px !important;
+        height: 380px !important;
+        gap: 20px;
+    }
+
+    .right-container-edit {
+        width: 527px !important;
+        height: 700px !important;
+        border-radius: 0 0 30px 30px !important;
+        background-color: #ffffff;
+    }
+
+    .input-edit {
+        gap: 50px;
+    }
+
+    .edit-button {
+        gap: 40px;
+    }
+
+    .log-in-input {
+        width: 420px !important;
+    }
+
+    .x-container-edit {
+        top: -400px !important;
+        right: -270px !important;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .log-in-input {
+        width: 350px !important;
+    }
+
+    input {
+        width: 350px;
+        font-size: 20px !important;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .left-container-edit {
+        width: 422px !important;
+    }
+
+    .right-container-edit {
+        width: 450px !important;
+    }
+
+    .log-in-input {
+        width: 350px !important;
+    }
+
+    .x-container-edit {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .full-container-edit {
+        width: unset !important;
+    }
+
+    .left-container-edit h1 {
+        font-size: 55px;
+    }
+
+    .left-container-edit span {
+        font-size: 28px;
+    }
+
+    .join-logo-edit {
+        width: 80px;
+        height: 95px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .w3-edit {
+        width: 355px !important;
+        height: 570px !important;
+    }
+
+    .sidebar-header {
+        height: 90px !important;
+    }
+
+    .sidebar-mid {
+        height: 90px !important;
+    }
+
+    h1 {
+        font-size: 50px !important;
+    }
+
+    .full-container-edit {
+        height: 820px !important;
+        top: -132px !important;
+        margin-left: -85px;
+        left: 45px !important;
+    }
+
+    .left-container-edit {
+        width: 380px !important;
+        gap: 0 !important;
+        height: 270px !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .right-container-edit {
+        width: 408px !important;
+        gap: 5px !important;
+        padding-top: 15px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .input-edit {
+        gap: 13px !important;
+        padding-top: 15px !important;
+    }
+
+    .img-container-big {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .blue-bar-edit {
+        width: 90px;
+        padding-top: 10px;
+    }
+
+    .log-in-input {
+        width: 335px !important;
+    }
+
+    .edit-button {
+        gap: 20px !important;
+    }
+}
