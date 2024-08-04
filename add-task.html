@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="./css/add-task-2.css">
     <link rel="stylesheet" href="./css/header-sidebar.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./responsive-css/summary-responsive.css">
-    <link rel="stylesheet" href="./responsive-css/board-responsive.css">
-    <link rel="stylesheet" href="./responsive-css/add-task-responsive.css">
-    <link rel="stylesheet" href="./responsive-css/contacts-responsive.css">
+    <link rel="stylesheet" href="./css/assign.css">
+    <link rel="stylesheet" href="./css/responsive/summary-responsive.css">
+    <link rel="stylesheet" href="./css/responsive/add-task-responsive.css">
+    <link rel="stylesheet" href="./css/responsive/contacts-responsive.css">
     <script src="./js/config.js"></script>
+    <script src="./js/assign.js"></script>
     <script src="./js/templateAddTask.js"></script>
     <script src="./js/loginRequired.js"></script>
     <script src="./js/addTask.js"></script>
@@ -111,6 +112,37 @@
                         <select id="userSelect" class="addTotaskInputField">
                         </select>
                     </div>
+
+                    <div class="addToTaskInputSection">
+                        <span class="addTask-Subheaders">Assigned to</span>
+                        <div class="dropdown">
+                            <input type="text" placeholder="Select contacts to assign" style="padding: 8px; box-sizing: border-box;" id="dropdownInput" onclick="toggleDropdown()" >
+                            <div class="dropdown-content" id="dropdownContent">
+                                <div onclick="toggleUser(this)">
+                                    <span class="user-icon" style="background-color: #00a2ff;">SM</span> Sofia Müller (You)
+                                    <input type="checkbox" value="SM" data-name="Sofia Müller" data-color="#00a2ff" class="checkbox">
+                                </div>
+                                <div onclick="toggleUser(this)">
+                                    <span class="user-icon" style="background-color: orange;">GK</span>
+                                    <span id="user-name">Gregor Krebs</span>
+                                    <input type="checkbox" value="GK" data-name="Gregor Krebs" data-color="orange" class="checkbox">
+                                </div>
+                                <div onclick="toggleUser(this)">
+                                    <span class="user-icon" style="background-color: purple;">AS</span> Anja Schulz
+                                    <input type="checkbox" value="AS" data-name="Anja Schulz" data-color="purple" class="checkbox">
+                                </div>
+                                <div onclick="toggleUser(this)">
+                                    <span class="user-icon" style="background-color: blue;">BZ</span> Benedikt Ziegler
+                                    <input type="checkbox" value="BZ" data-name="Benedikt Ziegler" data-color="blue" class="checkbox">
+                                </div>
+                                <div onclick="toggleUser(this)">
+                                    <span class="user-icon" style="background-color: pink;">DE</span> David Eisenberg
+                                    <input type="checkbox" value="DE" data-name="David Eisenberg" data-color="pink" class="checkbox">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selected-users" id="selectedUsers"></div>
+                    </div>                
 
                 </div>
                 <div id="taskContentRight" class="taskContentRight">
