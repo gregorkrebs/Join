@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <title>JOIN - Summary</title>
+    <link rel="stylesheet" href="./css/summary.css">
+    <link rel="stylesheet" href="./css/header-sidebar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/responsive/summary.css">
+    <script src="./js/loginRequired.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/summary.js"></script>
+</head>
+
+<body style="display: none;">
+    <div class="header">
+        <a href="/"><img class="new-logo d-none" src="./assets/img/join-logo.png"></a>
+        <span class="sub-header">Kanban Project Management Tool </span>
+        <div id="header-contacts" class="head-container-right">
+            <a href="./help.html"><img src="./assets/img/question.png"></a>
+            <div id="profile-actions" class="head-profile-img" onmouseover="showLogout()"></div>
+            <div id="header-logout" onmouseout="hideLogout()" class="header-logout">
+                <button id="logout-btn"> Log-out? </button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-header" id="sidebar-header">
+    </div>
+    <div class="headline-index-summary">
+        <p class="sum-mobile">Kanban Project Management Tool</p>
+        <span>Join 360</span>
+        <img class="headline-bar" src="./assets/img/headline-bar.png">
+        <p>Key Metrics at a Glance</p>
+    </div>
+    <div class="summary-overview" id="summary-overview">
+        <div class="sum-bottom-overview">
+            <div onmouseover="changeImg('todo-img', './assets/img/black-pen.png', './assets/img/to-do.png')"
+                onmouseout="changeImgBack('todo-img', './assets/img/black-pen.png', './assets/img/to-do.png')"
+                onclick="redirectToBoard()" class="sum-bottom-div">
+                <img id="todo-img" src="./assets/img/to-do.png">
+                <div class="sum-bottom-right-section">
+                    <div id="tasks-todo" class="sum-task-number"></div>
+                    <div class="sum-task">To-do</div>
+                </div>
+            </div>
+            <div onmouseover="changeImg('done-img', './assets/img/done-dark-hook.png', './assets/img/done-color-round.png')"
+                onmouseout="changeImgBack('done-img', './assets/img/done-dark-hook.png', './assets/img/done-color-round.png')"
+                onclick="redirectToBoard()" class="sum-bottom-div">
+                <img id="done-img" src="./assets/img/done-color-round.png">
+                <div class="sum-bottom-right-section">
+                    <div id="tasks-done" class="sum-task-number"></div>
+                    <div class="sum-task">Done</div>
+                </div>
+            </div>
+        </div>
+        <div onclick="redirectToBoard()" class="sum-mid-all">
+            <div class="sum-task-mid">
+                <div class="sum-mid-left">
+                    <img src="./assets/img/urgent-round.png">
+                    <div class="sum-mid-overview">
+                        <div class="sum-task-number" id="urgent-count"></div>
+                        <div class="sum-task">Urgent</div>
+                    </div>
+                </div>
+                <img class="border-mid" src="./assets/img/sum-task-bar.png">
+                <div class="sum-mid-right">
+                    <span id="NextUpcomingDeadline" class="sum-mid-span-top"></span>
+                    <span class="sum-mid-span-bottom"> Upcoming Deadline</span>
+                </div>
+            </div>
+        </div>
+        <div class="sum-task-top">
+            <div onclick="redirectToBoard()" class="sum-task-overview">
+                <div id="tasks-in-board" class="sum-task-number" id="sum-task1"></div>
+                <div class="sum-task">Tasks <br> in Board</div>
+            </div>
+            <div onclick="redirectToBoard()" class="sum-task-overview">
+                <div id="tasks-in-progress" class="sum-task-number" id="sum-task2"></div>
+                <div class="sum-task">Tasks <br> in Progress</div>
+            </div>
+            <div onclick="redirectToBoard()" class="sum-task-overview">
+                <div id="tasks-awaiting-feedback" class="sum-task-number" id="sum-task3"></div>
+                <div class="sum-task">Awaiting <br> Feedback</div>
+            </div>
+        </div>
+    </div>
+    <div id="sum-greeting" class="sum-mid-greeting">
+        <span id="board-time" class="sum-mid-span-greeting">Good morning,</span>
+        <span id="board-greeting" class="sum-mid-span-username"></span>
+    </div>
+    <div id="loader" class="loader-background">
+        <div class="loader"></div>
+    </div>
+
+</body>
+</html>

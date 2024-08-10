@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - edit Contacts</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./css/edit-contact.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/responsive/edit-contact.css">
+    <link rel="stylesheet" href="./css/responsive/summary.css">
+    <link rel="stylesheet" href="./css/responsive/board.css">
+    <link rel="stylesheet" href="./css/responsive/contacts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/config.js"></script>
+</head>
+
+<body>
+    <div onclick="event.stopPropagation()" class="full-container-edit show">
+        <div class="left-container-edit">
+            <img class="join-logo-edit" src="./assets/img/join-logo-white.png">
+            <h1>Edit contact</h1>
+            <span>Tasks are better with a team!</span>
+            <img class="blue-bar-edit" src="./assets/img/blue-bar-horizontal.png">
+        </div>
+        <div class="right-container-edit">
+            <span id="close-mobile-popup" onclick="closePopup()" class="x-container">X</span>
+            <div class="img-container-edit">
+                <div id="edit-img" class="contact-img-big"></div>
+                <p onclick="closePopup()" class="x-container-edit">X</p>
+            </div>
+            <form onsubmit="editBtn(); return false;">
+                <div class="input-edit">
+                    <div class="log-in-input">
+                        <input id="edit-input-lastname" required placeholder="Last name" type="text">
+                        <img src="./assets/img/body-logo.png">
+                    </div>
+                    <div class="log-in-input">
+                        <input id="edit-input-firstname" required placeholder="First name" type="text">
+                        <img src="./assets/img/body-logo.png">
+                    </div>
+                    <div class="log-in-input">
+                        <input id="edit-input-mail" required placeholder="Email" type="email">
+                        <img src="./assets/img/mail-logo.png">
+                    </div>
+                    <div class="log-in-input">
+                        <input id="edit-input-phone" required placeholder="Phone" type="number">
+                        <img src="./assets/img/phone-logo.png">
+                    </div>
+
+                    <div class="edit-button">
+                        <button class="primary-btn save-button">Save Contact</button>
+                        <button onclick="deleteUser()" type="button" class="primary-btn edit-button-red">Delete
+                            Contact</button>
+                    </div>
+                    <div id="popup-addTask" onclick="closeSuccessPopUp()" class="">
+                        <div id="popup-content" class="messageBox"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

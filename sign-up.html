@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN - Sign up</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./css/sign-up.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/login.js"></script>
+</head>
+
+<body>
+    <div class="full-login-content">
+        <div class="head-row">
+            <img class="join-logo" src="./assets/img/join-logo.png">
+        </div>
+        <div class="login-content">
+            <div class="log-in-container">
+                <div class="arrow-container">
+                    <a href="login.html">
+                        <img class="back-arrow" src="./assets/img/blue-arrow-left.png">
+                    </a>
+                </div>
+                <div class="log-in">
+                    <h1>Sign up</h1>
+                    <img src="./assets/img/blue-bar-horizontal.png">
+                </div>
+
+                <form id="registerForm">
+                    <div class="innerForm-names">
+                        <div class="log-in-input">
+                            <input id="sign-up-firstname" placeholder="First Name" type="text">
+                            <img src="./assets/img/body-logo.png">
+                        </div>
+                        <div class="log-in-input">
+                            <input id="sign-up-lastname" placeholder="Last Name" type="text">
+                            <img src="./assets/img/body-logo.png">
+                        </div>
+                    </div>
+                    <div class="log-in-input">
+                        <input id="sign-up-email" placeholder="Email" type="email">
+                        <img src="./assets/img/mail-logo.png">
+                    </div>
+                    <div class="log-in-input">
+                        <input id="sign-up-password" placeholder="Password" type="password">
+                        <img src="./assets/img/padlock.png">
+                    </div>
+                    <div class="log-in-input">
+                        <input id="sign-up-confirmPassword" placeholder="Repeat Password" type="password">
+                        <img src="./assets/img/padlock.png">
+                    </div>
+                    <div class="log-in-input">
+                        <input id="sign-up-profileColor" placeholder="Color" type="color" value="#eb7a34">
+                        <img src="./assets/img/padlock.png">
+                    </div>
+                    <div class="legal-checkbox">
+                        <input id="legal-checkbox" class="checkbox" type="checkbox">
+                        <span>I accept the <a href="./legal-notice.html">Privacy policy</a></span>
+                    </div>
+                    <div class="button-container">
+                        <button class="log-in-btn" id="submit">Sign up</button>
+                    </div>
+                    <div id="result"></div>
+                </form>
+            </div>
+
+            
+            <div class="legal-links">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+                <a href="./legal-notice.html">Legal notice</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

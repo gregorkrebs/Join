@@ -1,0 +1,247 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media (max-width: 1780px) {
+    .task {
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 1600px) {
+    .task {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1320px) {
+    .task {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .task-sections {
+        -ms-grid-columns: 49% 49%;
+        grid-template-columns: 49% 49%;
+        width: 97%;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .task {
+        width: 100%;
+    }
+
+    .content {
+        position: absolute;
+        top: 115px;
+        width: 90%;
+        left: 40px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+    }
+
+    .task-sections {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .content {
+        left: unset;
+        width: 90%;
+    }
+
+    .headline-board {
+
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
+        display: flex;
+    }
+
+    .task-sections {
+        width: unset;
+    }
+
+    .modify-button {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .moveTaskBtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+
+@media (max-width: 760px) {
+    .headline-board {
+        display: unset;
+    }
+
+
+
+    .modify-button {
+        left: 190px;
+    }
+
+    .showTask {
+        width: 320px;
+    }
+
+    .showTask-title {
+        font-size: 40px;
+    }
+
+    .add-search-bar {
+        margin-top: 25px;
+    }
+}
+
+
+@media (max-width: 670px) {
+    .search-results {
+        width: 92%;
+        margin-top: 86px;
+        margin-bottom: -50px;
+        border-radius: 8px;
+        padding: 8px;
+        padding-top: 10px;
+        z-index: 2;
+    }
+
+    .search-task, .log-in-btn {
+        width: 100%;
+    }
+
+    .task span {
+        font-size: 21px;
+    }
+
+    .task-sections {
+        padding-bottom: 100px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .headline-board {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 10px;
+        padding-bottom: 30px;
+    }
+
+    .add-search-bar {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 450px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        margin-right: 8px;
+    }
+
+    .task-box {
+        min-height: 200px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .delete-task-popup {
+        right: unset;
+        left: unset;
+    }
+
+    .sidebar-mid a {
+        gap: 5px !important;
+    }
+
+    .task-item {
+        width: 250px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .showTask {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: unset;
+        max-height: unset;
+        border-radius: unset;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 420px) {
+    .modify-button {
+        top: 0px;
+        left: 116px;
+        position: unset;
+    }
+}
+@media (max-width: 850px) and (min-height: 600px) {
+    .content {
+        top: 112px;
+    }
+
+    .task-box {
+        min-height: 170px;
+    }
+}
+@media (max-width: 850px) and (min-height: 700px) {
+    .task-box {
+        min-height: 200px;
+    }
+}

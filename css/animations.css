@@ -1,0 +1,14 @@
+.slide-in {
+    animation: slideInFromRight 2s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%); /* Startet außerhalb des Bildschirms (rechts) */
+        opacity: 0; /* Unsichtbar am Start */
+    }
+    to {
+        transform: translateX(0); /* Endposition */
+        opacity: 1; /* Sichtbar am Ende */
+    }
+}

@@ -1,0 +1,183 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media (max-width: 1500px) {
+    .sum-mid-greeting {
+        left: 940px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .summary-overview {
+        height: auto;
+    }
+
+    .sum-task {
+        font-size: 19px;
+    }
+
+    .sum-task-mid {
+        width: 430px;
+        gap: 30px;
+    }
+
+    .sum-mid-left {
+        gap: 0;
+    }
+
+    .sum-bottom-overview {
+        width: 430px;
+    }
+
+    .sum-bottom-div {
+        gap: 0;
+        height: 90px;
+    }
+
+    .sum-mid-greeting {
+        left: 820px;
+        top: 460px;
+    }
+
+    .sum-mid-span-greeting {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .sum-task-number {
+        font-size: 40px;
+        height: auto;
+    }
+
+    div#sum-greeting {
+        display: none;
+    }
+
+    .headline-index-summary {
+        left: 280px;
+        width: 560px;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+    }
+
+
+    .headline-index-summary span {
+        font-size: 50px;
+    }
+
+    .headline-index-summary p {
+        font-size: 23px;
+    }
+
+    .sum-task-overview {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sum-mobile {
+        display: block;
+        border-bottom: 0 !important;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .headline-index-summary p {
+        font-size: 19px;
+        scale: 0.8;
+    }
+
+    .sum-task-overview {
+        width: 90px;
+        height: 90px;
+    }
+
+    .sum-task {
+        font-size: 12px;
+    }
+
+    .sum-task-top {
+        gap: 15px;
+    }
+
+    .sum-mid-all {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .sum-task-mid {
+        width: 300px !important;
+        gap: 20px;
+        height: 100px;
+    }
+
+    .sum-mid-left {
+        height: unset;
+        width: 100px;
+    }
+
+    .sum-mid-left img {
+        width: 50px;
+    }
+
+    .sum-mid-span-top {
+        font-size: 18px;
+    }
+
+    .sum-bottom-overview {
+        gap: 15px;
+        width: unset;
+        height: unset;
+    }
+
+    .sum-bottom-div {
+        height: 100px;
+        width: 150px;
+    }
+
+    .sum-bottom-div img {
+        width: 50px;
+    }
+}
+
+
+@media (max-width: 389px) {
+    .headline-index-summary {
+        height: 135px;
+        max-width: 100%;
+    }
+}
+
+@media (max-height: 570px) {
+    .sum-task-mid {
+        height: 80px;
+    }
+
+    .border-mid {
+        height: 80px;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+
+    .sum-bottom-div {
+        height: 80px;
+    }
+
+    .headline-index-summary p:nth-child(1) {
+        display: none;
+    }
+
+    .headline-index-summary {
+        height: 100px;
+    }
+} 

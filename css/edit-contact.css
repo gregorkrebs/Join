@@ -1,0 +1,197 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+body {
+    font-family: 'inter', sans-serif;
+    margin: 0;
+}
+
+input {
+    border: none;
+    width: 422px;
+    height: 51px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: none;
+}
+
+#w3-edit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.full-container-edit {
+    position: relative;
+    height: 594px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    scale: 0.7;
+}
+
+.left-container-edit {
+    background-color: #2A3647;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 46px;
+    gap: 12px;
+    width: 420px;
+    left: 0px;
+    top: 0px;
+    color: white;
+    border-radius: 30px 0 0 30px;
+}
+
+.blue-bar-edit {
+    width: 90px;
+}
+
+.join-logo-edit {
+    width: 55px;
+    height: 66px;
+    position: absolute;
+    Top: 145px;
+}
+
+.left-container-edit h1 {
+    font-size: 61px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.left-container-edit span {
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.right-container-edit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 670px;
+    border-radius: 0 30px 30px 0;
+    border: 0.1px solid #d1d1d1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.img-container-edit {
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    background-color: #d1d1d1;
+    border-radius: 70px;
+    margin-left: 10px;
+}
+
+.x-container-edit {
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    top: -361px;
+    right: -610px;
+}
+
+#profile-img {
+    width: 62px;
+    height: 62px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.log-in-input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid #d1d1d1;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 422px;
+    background-color: white;
+}
+
+.input-edit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px;
+    gap: 30px;
+    margin-left: 50px;
+}
+
+.primary-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    width: 190px;
+    height: 61px;
+    background-color: #2A3647;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 21px;
+    border: none;
+}
+
+.edit-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 35px;
+}
+
+.save-button:hover {
+    background-color: #29abe2 !important;
+}
+
+.edit-button-red {
+    background-color: red !important;
+}

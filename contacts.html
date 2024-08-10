@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Contacts</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/board-2.css">
+    <link rel="stylesheet" href="./css/header-sidebar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive/summary.css">
+    <link rel="stylesheet" href="./css/responsive/board.css">
+    <link rel="stylesheet" href="./css/responsive/contacts.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/templates/contacts.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/loginRequired.js"></script>
+</head>
+
+<body style="display: none;">
+    <div onclick="closePopup()" id="show-Contact-Background" class="show-Contact-Background d-none"></div>
+    <div class="header">
+        <a href="/">
+            <img class="new-logo d-none" src="./assets/img/join-logo.png">
+        </a>
+        <span class="sub-header">Kanban Project Management Tool </span>
+        <div id="header-contacts" class="head-container-right">
+            <a href="./help.html"><img src="./assets/img/question.png"></a>
+            <div id="profile-actions" class="head-profile-img" onmouseover="showLogout()"></div>
+            <div id="header-logout" onmouseout="hideLogout()" class="header-logout">
+                <button id="logout-btn"> Log-out? </button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-header" id="sidebar-header"></div>
+    <div id="contact" class="contact">
+        <div id="contactDetailsPopup"></div>
+        <div id="show-addTaskInclude"></div>
+        <div class="contact-list-overview">
+            <button id="add-new-contact-btn" onclick="addNewContact()" class="new-contact">New Contact<img src="./assets/img/user-plus.png">
+            </button>
+            <div id="contact-list" class="contact-list">
+            </div>
+        </div>
+        <div class="contact-main" id="contact-main">
+            <div id="contact-headline" class="headline-index-contact">
+                <h1>Contacts</h1>
+                <img id="headline-bar" src="./assets/img/headline-bar.png">
+                <text>Better with a team</text>
+                <div id="contact-details" class="contact-details slide-in"></div>
+            </div>
+
+            <!-- Modify contact modal-->
+            <div id="edit-contact-popup" class="modal d-none" onclick="closeEditPopup()">
+                <div style="gap: 50px;" class="modal-content add-contact" onclick="event.stopPropagation()">
+                    <div class="add-contact-backgrundColor">
+                        <span class="close-signe" onclick="closeEditPopup()">&times;</span>
+                        <img class="join-logo-head-add-contact" src="./assets/img/join-logo-white.png">
+                        <h1 class="add-contact-title">Edit contact</h1>
+                        <p class="add-contact-subtitle">Tasks are better with a team!</p>
+                        <p class="add-contact-divider"></p>
+                    </div>
+                    <div class="profile-image-upload">
+                        <div class="profile-image-container">
+                            <p>Upload profilpicture</p>
+                            <input type="file" id="fileupload">
+                        </div>
+                    </div>
+                    <div class="add-contact-form-container">
+                        <span class="close" onclick="closeEditPopup()">&times;</span>
+                        <h2 id="to-edit-contact"></h2>
+                        <form class="edit-contact-form" id="edit-contact-form"></form>
+                    </div>
+                </div>
+            </div>
+            <!-- Add contact modal-->
+            <div id="add-contact-popup" class="modal d-none" onclick="closeEditPopup()">
+                <div style="gap: 50px;" class="modal-content add-contact" onclick="event.stopPropagation()">
+                    <div class="add-contact-backgrundColor">
+                        <span class="close-signe" onclick="closeEditPopup()">&times;</span>
+                        <img class="join-logo-head-add-contact" src="./assets/img/join-logo-white.png">
+                        <h1 class="add-contact-title">Add contact</h1>
+                        <p class="add-contact-subtitle">Tasks are better with a team!</p>
+                        <p class="add-contact-divider"></p>
+                    </div>
+                    <div class="profile-image-upload">
+                        <div class="profile-image-container">
+                            <p>Upload profilpicture</p>
+                            <input type="file" id="fileupload">
+                        </div>
+                    </div>
+                    <div class="add-contact-form-container">
+                        <span class="close" onclick="closeEditPopup()">&times;</span>
+                        <form class="edit-contact-form" id="edit-contact-form">
+                            <div class="edit-input">
+                                <label for="newfirstName">First Name:</label>
+                                <input type="text" id="newfirstName" name="firstName" placeholder="First name">
+                            </div>
+                            <div class="edit-input">
+                                <label for="newlastName">Last Name:</label>
+                                <input type="text" id="newlastName" name="lastName" placeholder="last name">
+                            </div>
+                            <div class="edit-input">
+                                <label for="newemail">Email:</label>
+                                <input type="email" id="newemail" name="email" placeholder="E-Mail">
+                            </div>
+                            <div class="edit-input">
+                                <label for="newphone">Phone:</label>
+                                <input type="tel" id="newphone" name="phone" placeholder="Phone number">
+                            </div>
+                            <div class="edit-input">
+                                <label for="phone">Profil color:</label>
+                                <input type="color" id="color" name="color" placeholder="#091931">
+                            </div>
+                            <div class="add-contact-buttons">
+                                <button class="btn-cancel" type="button" onclick=" closeEditPopup()">Cancel X</button>
+                                <button class="btn-create" type="button" onclick="saveNewContact()">Create contact ✓</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loader" class="loader-background">
+            <div class="loader"></div>
+        </div>
+    </div>
+</body>
+
+</html>

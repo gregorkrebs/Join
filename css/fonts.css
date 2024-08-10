@@ -1,0 +1,15 @@
+/* inter-100 - latin */
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf'); /* IE9 Compat Modes */
+  }
+
+* {
+    --sb-track-color: transparent;
+    --sb-thumb-color: #a8a8a8;
+    --sb-size: 4px;
+}
+
+*, html, body, span, a, h1, h2, h3, h4, div, form, input, select, p, table, th, tr, td, p {
+    font-family: 'inter', sans-serif;
+}

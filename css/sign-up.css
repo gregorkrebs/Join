@@ -1,0 +1,443 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+    background-color: #f6f7f8;
+    font-family: 'inter', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0px;
+}
+
+p {
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+}
+
+input {
+    border: none;
+    width: 400px;
+    height: 50px;
+    font-size: 21px !important;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.full-login-content {
+    width: 100vw;
+}
+
+.login-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.head-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.join-logo {
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 40px;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+
+.sign-up-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 91px;
+    height: 51px;
+    background: #2A3647;
+    border-radius: 8px;
+    color: white;
+    border-color: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.log-in-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 0px;
+    gap: 15px;
+    width: 652px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+            box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+}
+
+.arrow-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: inherit;
+    margin-left: 40px;
+    max-width: 100%;
+}
+
+.back-arrow {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.log-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+}
+
+.log-in-input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid #d1d1d1;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 422px;
+}
+
+.log-in-checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+}
+
+.checkbox {
+    width: 20px !important;
+    cursor: pointer;
+}
+
+.href-blue {
+    color: #29ABE2;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+}
+
+.log-in-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 4px 0px;
+    gap: 10px;
+    width: 145px;
+    height: 51px;
+    background: #2A3647;
+    border-radius: 8px;
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+form {
+    gap: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    justify-content: center;
+}
+
+
+input#sign-up-email, input#sign-up-password {
+    margin-right: -12px !important;
+}
+
+.legal-checkbox {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 24px;
+    font-size: 16px;
+}
+
+.legal-checkbox a {
+    color: #29ABE2;
+    font-weight: 600;
+}
+
+.legal-checkbox span {
+    color: #A8A8A8;
+}
+
+div#result {
+    -ms-grid-row-align: center !important;
+    -ms-grid-column-align: center !important;
+    place-self: center !important;
+}
+
+.innerForm-names {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 50px;
+}
+
+
+.innerForm-names input {
+    max-width: 178px;
+    margin-right: -50px;
+}
+
+.innerForm-names :nth-child(2) {
+    margin-left: 23px;
+}
+
+.join-logo:hover, .log-in-container:hover, form#loginForm:hover, button:hover {
+    scale: 1.01;
+}
+
+.join-logo {
+    position: relative;
+    z-index: 10;
+    left: 10%;
+    padding-top: 36px;
+    margin-bottom: 25px;
+}
+
+.legal-links {
+    margin-top: 100px;
+    margin-bottom: 48px;
+}
+
+.legal-links a {
+    color: #A8A8A8; 
+}
+
+.legal-links a {
+    padding: 15px
+}
+
+@media (max-width: 1100px) {
+    .log-in-container {
+        width: 500px;
+    }
+
+    .log-in-input {
+        width: 380px;
+    }
+
+    .innerForm-names input {
+        max-width: 157px;
+        margin-right: -50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .login-content {
+        margin-top: 50px;
+    }
+
+    .log-in-checkbox {
+        font-size: 18px;
+    }
+
+    .log-in-input img {
+        margin-left: -31px;
+    }
+
+    input {
+        margin-right: -12px !important;
+        background-color: transparent !important;
+    }
+
+    .innerForm-names input {
+        max-width: 120px;
+        margin-right: -50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .join-logo {
+        width: 60px;
+    }
+    /* .log-in-container {
+        width: 400px;
+        gap: 15px;
+    } */
+}
+
+@media (max-width: 550px) {
+    .innerForm-names {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .innerForm-names .log-in-input:nth-child(2) {
+        margin-top: 15px;
+        margin-left: 0px
+    }
+
+    .innerForm-names div img {
+        margin-left: 64% !important;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .log-in-container {
+        width: 320px;
+        gap: 15px;
+    }
+
+    .log-in {
+        margin-top: -45px;
+    }
+
+    .log-in-input {
+        width: 300px;
+    }
+
+    .login-content {
+        margin-top: 0;
+    }
+
+    .head-row {
+        height: 100px;
+        padding-bottom: 20px;
+    }
+
+    .innerForm-names div img {
+        margin-left: 54% !important;
+    }
+}

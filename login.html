@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/style-legal.css">
+    <script src="./js/config.js"></script>
+</head>
+<body>
+    <div class="full-login-content">
+        <div class="head-row">
+            <div class="start-logo">
+                <img class="join-logo" src="assets/img/join-logo.png" alt="">
+            </div>
+            <div class="sign-up-div">
+                <span>Not a Join user?</span>
+                <button onclick= "location.href='sign-up.html'" class="sign-up-btn">Sign up</button>
+            </div>
+        </div>
+        <div id="login-content" class="login-content" style="display: none;flex-direction: column;align-items: center;"">
+            <form class="log-in-container" id="loginForm">
+                <div class="log-in">
+                    <h1>Log in</h1>
+                    <img src="./assets/img/blue-bar-horizontal.png">
+                </div>
+                <div class="log-in-input">
+                    <input id="email" novalidate placeholder="Email" type="text">
+                    <img src="./assets/img/mail-logo.png">
+                </div>
+                <div class="log-in-input">
+                    <input id="password" required placeholder="Password" type="password">
+                    <img src="./assets/img/padlock.png">
+                </div>
+                <div class="remeber-login">
+                    <input class="checkbox" type="checkbox">
+                    <span>Remember me</span>
+                    <a href="forgot-password.html" class="href-blue">Forgot my password</a>
+                </div>
+                <div class="button-container">
+                    <button class="log-in-btn">Log in</button>
+                    <button type="button" onclick="guestLogin(event)" class="guest-log-in-btn">Guest Log in</button>
+                </div>
+                <div style="padding: 20px;text-align-last: center;margin-top: -37px;">
+                    <div id="result"></div>
+                </div>
+            </form>
+
+            <div class="legal-links">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+                <a href="./legal-notice.html">Legal notice</a>
+            </div>
+        </div>
+        <div id="loader" class="loader-background">
+            <div class="loader"></div>
+        </div>
+        <script src="js/login.js"></script>
+    </div>
+</body>
+</html>

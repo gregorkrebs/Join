@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <title>JOIN - Add Task</title>
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/add-task.css">
+    <link rel="stylesheet" href="./css/add-task-2.css">
+    <link rel="stylesheet" href="./css/header-sidebar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/assign.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/responsive/summary.css">
+    <link rel="stylesheet" href="./css/responsive/add-task.css">
+    <link rel="stylesheet" href="./css/responsive/contacts.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/assign.js"></script>
+    <!-- <script src="./js/templateAddTask.js"></script> -->
+    <script src="./js/loginRequired.js"></script>
+    <script src="./js/addTask.js"></script>
+</head>
+
+<body style="display: none;">
+    <div class="header">
+        <a href="/"><img class="new-logo d-none" src="./assets/img/join-logo.png"></a>
+        <span class="sub-header">Kanban Project Management Tool </span>
+        <div id="header-contacts" class="head-container-right">
+            <a href="./help.html"><img src="./assets/img/question.png"></a>
+            <div id="profile-actions" class="head-profile-img" onmouseover="showLogout()"></div>
+            <div id="header-logout" onmouseout="hideLogout()" class="header-logout">
+                <button id="logout-btn"> Log-out? </button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-header" id="sidebar-header"></div>
+    <div id="addTaskContent" class="addTaskContent">
+        <div id="mainHeadline" class="mainHeadline">
+            <h1 class="addTask-header">Add Task</h1>
+        </div>
+        <form id="add-task">
+            <div id="taskContent" class="taskContent">
+                <div id="taskContentLeft" class="taskContentLeft">
+                    <div class="addToTaskInputSection">
+                        <span class="addTask-Subheaders">Title<span style="color:red">*</span></span>
+                        <input placeholder="Enter a title" required class="addTotaskInputField " id="title">
+                    </div>
+                    <div class="addToTaskInputSection">
+                        <span class="addTask-Subheaders">Description<span style="color:red">*</span></span>
+                        <textarea required id="description" placeholder="Enter a description" class="input-description"></textarea>
+                    </div>
+                    <div class="addToTaskInputSection">
+                        <span class="addTask-Subheaders">Assign to</span>
+                        <div class="dropdown">
+                            <input type="text" placeholder="Select contacts to assign" style="padding: 8px; box-sizing: border-box;" id="dropdownInput" onclick="toggleDropdown()" >
+                            <div class="dropdown-content" id="dropdownContent"></div>
+                        </div>
+                        <div class="selected-users" id="selectedUsers"></div>
+                    </div>                
+                </div>
+                <div id="taskContentRight" class="taskContentRight">
+                    <div class="addToTaskInputSectionRight">
+                        <span class="addTask-Subheaders">Due date<span style="color:red">*</span></span>
+                        <input type="date" name="today" placeholder="" class="addTotaskInputField" id="date"
+                            min="2024-07-15">
+                        <div class="priority-container">
+                            <p class="form-title">Prio</p>
+                            <div>
+                                <div id="prio-urgent" onclick="changePriority('urgent')" class="priority-icons">Urgent
+                                    <img id="img-prio-urgent" src="./assets/img/prio-urgent-solo.png" alt="Priority urgent">
+                                </div>
+                                <div id="prio-medium" onclick="changePriority('medium')" class="priority-icons">Medium
+                                    <img id="img-prio-medium" src="./assets/img/prio-medium-solo.png" alt="Priority medium">
+                                </div>
+                                <div style="background-color: #7ae229;color: #ffffff;" id="prio-low" onclick="changePriority('low')" class="priority-icons">Low
+                                    <img id="img-prio-low" src="./assets/img/prio-low-white.png" alt="Priority low">
+                                </div>
+                                <div id="input-prio" type="text" class="d-none">low</div>
+                            </div>
+                        </div>
+                        <div class="addToTaskInputSection">
+                            <span class="addTask-Subheaders">Category<span style="color:red">*</span></span>
+                            <select id="categorySelect" class="addTotaskInputField">
+                                <option value="technicalTask">Technical Task</option>
+                                <option value="userStory">User Story</option>
+                            </select>
+                        </div>
+                        <div class="addToTaskInputSection">
+                            <span class="addTask-Subheaders">Subtasks</span>
+                            <input type="text" id="subtaskInput" placeholder="Enter a subtask" class="addTotaskInputField">
+                            <div id="subtaskList"></div>
+                        </div>
+                    </div>
+                    <div class="btnRow">
+                        <button onclick="clearAllFields()" type="button" id="clearFields">Clear X</button>
+                        <button class="submit">Create Task ✓</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span><span style="color:red">*</span>This field is required</span>
+            </div>
+
+        </form>
+
+        
+        <div id="success" class="d-none slide-in">
+            <div id="successMessage"></div>
+        </div>
+        <!-- <div id="loader" class="loader-background">
+            <div class="loader"></div>
+        </div> -->
+    </div>
+</body>
+
+<script>
+    let today = new Date().toISOString().split('T')[0];
+    document.getElementsByName('today')[0].setAttribute('min', today);
+</script>
+
+</html>
